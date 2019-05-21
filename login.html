@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LOGIN</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>  
+  <body background= "back1.jpg">
+  
+ 
+   <div class = "topnav" id= "myTopnav">
+   <a href="index.html">HOME</a>
+  <a href = "products1.html">WOMEN</a>
+  <a href = "products2.html">MEN</a>
+   <a> <input name="Search-products" id="search-product" style="width: 200px" /></a>
+   <a><button type="button" onclick="alert('Search couldnot find')">Search</button></a>
+  <a href = "aboutus.html">ABOUT US</a>
+  <a href = "contactus.html">CONTACT US</a>
+  <a class="active" href = "login.html">LOGIN</a>
+ </div>
+  <center>
+  <div style="padding-left:16px">
+  <h3 style="color:red;s" text-align: right; margin-left:35px;">SIGN UP NOW.</h3>
+</div>
+  <form  action="" onsubmit="LoginForm()" >
+  
+   <b style="color: black;">FIRST NAME:</b><br>
+    <input type="text" name="firstname" maxlength="20" placeholder="firstname.." required>
+    <br>
+   <b style="color: black;">LAST NAME:</b><br>
+<input type="text" name="lastname" maxlength="20" placeholder="lastname.." required>
+<br>
+<b style="color: black;">EMAIL ADDRESS:</b><br>
+<input type="text" name="email" maxlength="40" placeholder="email.."  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+<br>
+<input type="submit" value="Sign Up">
+<input type="reset" value="Reset">
+</form>
+<h1>THANK-YOU!!!!</h1>
+</center>
+</body>
+</html>

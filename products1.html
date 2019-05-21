@@ -1,0 +1,133 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WOMEN</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+            var value;
+            var productid;
+
+            function setitem(abd) {
+                value = abd.value;
+                productid = abd.getAttribute("productid");
+                price = adb.getAttribute("price");
+                var intRegex = /^\d+$/;
+                if (!intRegex.test(value) || (value <= 0)) {
+                    alert('Please Enter valid number of items');
+                } else {
+                    numberofitem = value;
+                }
+            }
+
+            function getcookie() {
+                if (value == undefined) {
+                    alert("There is nothing in the shopping cart!");
+                } else {
+                    var cookiearray = document.cookie.split(';');
+                    var toprint = "Shopping Cart Items\n----------------------\n";
+                    for (var i = 0; i < cookiearray.length; ++i) {
+                        var pairArray = cookiearray[i].split('=');
+                        toprint += "Item ID:\t" + pairArray[0] + "\nQty:\t" + pairArray[1] + "\n-------------------------------\n";
+                    }
+                    alert(toprint);
+                }
+            }
+
+            function setcookie() {
+                if (value == undefined) {
+                    alert("Please add number of items in text box");
+                } else {
+                    document.cookie = productid + "=" + value + "; ";
+
+                    alert(value + " Product(s) with id " + productid +
+                            " has been added to shopping cart!");
+                }
+                document.getElementById("item-select").value = "";
+            }
+        </script>
+        </head>
+      <body background= "back1.jpg">
+
+
+   <div class = "topnav" id= "myTopnav">
+   <a href="index.html">HOME</a>
+  <a class="active" href = "products1.html">WOMEN</a>
+  <a href = "products2.html">MEN</a>
+   <a> <input name="Search-products" id="search-product" style="width: 200px" /></a>
+   <a><button type="button" onclick="alert('Search couldnot find')">Search</button></a>
+  <a href = "aboutus.html">ABOUT US</a>
+  <a href = "contactus.html">CONTACT US</a>
+  <a href = "login.html">LOGIN</a>
+  <ul class="col-sm-4 navbar-right"  >
+                <li><a href="javascript:getcookie()" class="btn_btn-info"><img src="shopcart.png" style="width:25px;height:25px;"></a></li>
+                </ul>
+  </div>
+  <div style="padding-left:16px">
+ </div>
+      <center>
+           <div class="container">
+            <br style="clear: all;"><br>
+            <h1>WOMEN</h1>
+       			 <div class="col-md-4"></div>
+                    <div class="panel panel-default">
+                    <div class="panel-heading">NEW ARRIVALS</div>
+                    <div class="panel-body">
+                        <img src="pc2.jpg" alt="First Item" width="284" height="177" />
+                        <br>
+                        Leopard long sleeves sweater<br>
+						color: black/grey<br>
+                        Price $49.99<br>
+
+                        Qty: <input name="item-select" id="item-select" productid="101" style="width: 50px" onBlur="setitem(this)" />
+                        <button type="button" onclick="setcookie()">Add to cart.</button>
+                        <br><br><br>
+
+                    </div>
+                </div>
+
+            </div>
+
+          
+			 <div class="col-md-4"></div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">SALE</div>
+                    <div class="panel-body">
+                        <img src="pc3.jpg" alt="long dress" width="284" height="177" />
+                        <br>
+                        Long spring floral gown<br>
+						Color: rainbow<br>
+						Price $49.99<br>
+						
+                        Qty: <input name="item-select" id="item-select" productid="102" style="width: 50px" onBlur="setitem(this)" />
+                        <button type="button" onclick="setcookie()">Add to cart.</button>                       
+						<br><br><br>
+
+                    </div>
+                </div>
+
+            </div>
+			 
+			 <div class="col-md-4"></div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">SALE</div>
+                    <div class="panel-body">
+                        <img src="pc1.jpg" alt="long dress" width="284" height="177" />
+                        <br>
+                        Long spring floral gown<br>
+						Color: rainbow<br>
+						Price $79.99<br>
+						
+                        Qty: <input name="item-select" id="item-select" productid="103" style="width: 50px" onBlur="setitem(this)" />
+                        <button type="button" onclick="setcookie()">Add to cart.</button>                       
+						<br><br><br>
+						</center>
+						  </div>
+                </div>
+
+            </div>
+
+    </body>
+</html>
+

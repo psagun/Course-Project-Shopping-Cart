@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>CONTACT US</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function contactUsForm(){
+			var x = document.getElementById("mail").pattern;
+
+			alert("Thank You. Your Message has been sent successfully.")
+		}
+	</script>
+</head>
+<div class="topnav" align="topnav">
+
+   <a href="index.html">HOME</a>
+  <a href = "products1.html">WOMEN</a>
+  <a href = "products2.html">MEN</a>
+   <a> <input name="Search-products" id="search-product" style="width: 200px" /></a>
+   <a><button type="button" onclick="alert('Search couldnot find')">Search</button></a>
+  <a href = "aboutus.html">ABOUT US</a>
+  <a class="active" href = "contactus.html">CONTACT US</a>
+  <a href = "login.html">LOGIN</a>
+  </div>
+<center>
+<div style="padding-left:16px">
+  <h3 style="color:blue;s" text-align: center; margin-left:35px;">CONTACT US HERE.</h3>
+ </div>
+<form action="" onsubmit="contactUsForm()" >
+<b>Full Name</b><br>
+<input type="text" name="name" placeholder="First name, last name" required><br>
+<b>E-mail ID</b><br>
+<input type="text" id="mail" name="email" placeholder="Your E-mail Address..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
+<b>Message:</b><br>
+<textarea name="message-box" placeholder="Message" cols="50" rows ="5" required></textarea><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+   <H3>You can email us to twiggymarilyn00@gmail.com<h3>
+   <H3>contact: 917-484-8363<h3>
+</center>
+
+</body>
+</html>
